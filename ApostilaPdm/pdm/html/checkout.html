@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Checkout Mirror Fashion</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/estiloprodutos.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../javascript/total.js"></script>
+</head>
+
+<body>
+    <div class="jumbotron	jumbotron-fluid">
+        <div class="container">
+            <!--	h1	e	p	que	já	tínhamos,	somente	adicionar	as	respectivas	classes	-->
+            <h1>Ótima escolha!</h1>
+            <p>Obrigado por comprar na Mirror Fashion!
+                Preencha seus dados para efetivar a compra.</p>
+        </div><!--	fim	.container	dentro	do	jumbotron	-->
+    </div>
+
+
+    <div class="container">
+        <div class="card-md-4">
+            <div class="card	mb-3">
+                <div class="card-header">
+                    Sua compra
+                </div><!--	fim	.card-header	-->
+                <div class="card-body">
+                    <dl>
+                        <img src="../img/produtos/foto1-verde.png" alt="Fuzzy	Cardigan" class="img-thumbnail	mb-3">
+                        <dt>Produto</dt>
+                        <dd>Fuzzy Cardigan</dd>
+                        <dt>Cor</dt>
+                        <dd>Verde</dd>
+                        <dt>Tamanho</dt>
+                        <dd>40</dd>
+                        <dt>Preço</dt>
+                        <dd id="preco" value="129,90">R$ 129,90</dd> 
+                    </dl>
+                </div><!--	fim	.card-body	-->
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+
+                    <div class="form-group">
+                        <label for="qtd">Quantidade:</label>
+                        <input type="number" id="qtd" min="1" max="99" value="1" class="form-control" oninput="total()">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="total">Total:</label>
+                        <output for="qtd preco" id="total" class="form-control">
+                            R$ 129,90
+                        </output>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <form>
+            <fieldset>
+                <legend>Dados pessoais</legend>
+                <div class="form-group">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" class="form-control" id="nome" name="nome">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="cpf">CPF</label>
+                    <input type="text" class="form-control" id="cpf" name="cpf">
+                </div>
+                <div class="form-group	custom-control	custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="newsletter" value="sim" checked>
+                    <label class="custom-control-label" for="newsletter">
+                        Quero receber Newsletter da Mirror Fashion
+                    </label>
+                </div>
+            </fieldset>
+        </form>
+        <fieldset>
+            <legend>Cartão de crédito</legend>
+            <div class="form-group">
+                <label for="numero-cartao">Número - CVV</label>
+                <input type="text" class="form-control" id="numero-cartao" name="numero-cartao">
+            </div>
+            <div class="form-group">
+                <label for="bandeira-cartao">Bandeira</label>
+                <select class="custom-select" id="bandeira-cartao">
+                    <option disabled selected>Selecione uma opção...</option>
+                    <option value="master">MasterCard</option>
+                    <option value="visa">VISA</option>
+                    <option value="amex">American Express</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="validade-cartao">Validade</label>
+                <input type="month" class="form-control" id="validade-cartao" name="validade-cartao">
+            </div>
+        </fieldset>
+    </div>
+<button	type="submit" class="btn	btn-primary">
+					Confirmar	Pedido
+</button>
+
+</body>
+
+</html>
